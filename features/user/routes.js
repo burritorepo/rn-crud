@@ -1,11 +1,14 @@
+import React from 'react';
 import {
   createStackNavigator
 } from 'react-navigation';
 
+import { HeaderButton } from '../../components'
 import {
   UserScreen,
   UserDetailScreen,
-  UserEditScreen
+  UserEditScreen,
+  UserAddScreen
 } from './components';
 
 const UserRoute = createStackNavigator(
@@ -18,7 +21,22 @@ const UserRoute = createStackNavigator(
     },
     UserEdit: {
       screen: UserEditScreen
+    },
+    UserAdd: {
+      screen: UserAddScreen
     }
+  },
+  {
+    initialRouteName: 'User',
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: 'red',
+      },
+      headerTintColor: 'white',
+      title: 'Usuarios',
+      headerRight: <HeaderButton />
+    },
+    headerBackTitleVisible: false
   }
 );
 

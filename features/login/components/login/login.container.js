@@ -1,15 +1,46 @@
 import React, { Component } from 'react';
-import { Text, View, TextInput, StyleSheet } from 'react-native';
+import {
+  View,
+  Text,
+  TextInput,
+  Button,
+  StyleSheet
+} from 'react-native';
 
 const form = StyleSheet.create({
   row: {
     marginBottom: 20
   },
   control: {
-    borderColor: '#444',
-    borderWidth: 1
+    borderColor: '#ccc',
+    borderWidth: 1,
+    paddingTop: 10,
+    paddingBottom: 10,
+    borderRadius: 4
+  },
+  label: {
+    fontSize: 14,
+    marginBottom: 5
   }
-})
+});
+
+const box = StyleSheet.create({
+  padding: {
+    paddingLeft: 20,
+    paddingRight: 20
+  },
+  alignTop: {
+  },
+  alignCenter: {
+    flex: 1,
+    justifyContent: 'center',
+  }
+});
+
+const color = {
+  primary: 'red',
+  secondari: 'grey'
+};
 class LoginScreen extends Component {
   constructor(props) {
     super(props);
@@ -25,14 +56,18 @@ class LoginScreen extends Component {
     })
   }
 
+  handleSubmit() {
+    this.props.navigation.navigate('App')
+  }
+
   render() {
     return (
-      <View>
+      <View style={Object.assign({}, box.padding, box.alignCenter)}>
         <View>
-          <Text>Login</Text>
+          <Text style={{ fontSize: 30, textAlign: 'center', marginBottom: 20 }}>Login</Text>
         </View>
         <View style={form.row}>
-          <Text>Usuario</Text>
+          <Text style={form.label}>Usuario</Text>
           <TextInput
             style={form.control}
             onChangeText={this.handleInputChange.bind(this, 'user')}
@@ -40,11 +75,18 @@ class LoginScreen extends Component {
           />
         </View>
         <View style={form.row}>
-          <Text>Contraseña</Text>
+          <Text style={form.label}>Contraseña</Text>
           <TextInput
             style={form.control}
             onChangeText={this.handleInputChange.bind(this, 'password')}
             value={this.state.text}
+          />
+        </View>
+        <View style={form.row}>
+          <Button
+            onPress={this.handleSubmit.bind(this)}
+            title="Entrar"
+            color={color.primary}
           />
         </View>
       </View>

@@ -1,4 +1,7 @@
-import { createSwitchNavigator } from 'react-navigation';
+import {
+  createBottomTabNavigator,
+  createSwitchNavigator
+} from 'react-navigation';
 
 import {
   LoginScreen,
@@ -8,9 +11,15 @@ import {
 
 const rootRoutes = createSwitchNavigator(
   {
-    LoginLoading: LoginLoadingScreen,
-    App: UserRoute,
-    Login: LoginScreen,
+    LoginLoading: {
+      screen: LoginLoadingScreen
+    },
+    App: {
+      screen: UserRoute
+    },
+    Login: {
+      screen: LoginScreen
+    }
   },
   {
     initialRouteName: 'LoginLoading',

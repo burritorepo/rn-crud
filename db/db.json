@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "firstName": "Jose Luis Jovi",
+      "lastName": "Salazar",
+      "email": "jsalazar@gmail.com",
+      "phone": "923708059",
+      "country": "1",
+      "photo": "https://api.adorable.io/avatars/200/abott@adorable.pngCopy to Clipboard",
+      "about": "Hola mi nombre es Jose Luis y tengo 40 años.",
+      "id": 2
+    },
+    {
+      "firstName": "Francisco",
+      "lastName": "Lobaton",
+      "email": "flobaton@gmail.com",
+      "phone": "999333888",
+      "country": "4",
+      "photo": "https://api.adorable.io/avatars/200/Sebastian.pngCopy to Clipboard",
+      "about": "Hola mi nombre es francisco tengo 50 años y me gusta surfear y tener muchas horas de codigo.",
+      "id": 4
+    },
+    {
+      "firstName": "Cristhian Sebastians ",
+      "lastName": "Yabiku",
+      "email": "sby2710@gmail.com",
+      "phone": "923708059",
+      "country": "1",
+      "photo": "https://img.icons8.com/bubbles/2x/user.png",
+      "about": "Hola me llamo sebastian Yabiku tengo 32 años y soy front end .",
+      "id": 5
+    }
+  ]
+}
